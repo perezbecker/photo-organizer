@@ -8,6 +8,7 @@ Import directory tree of photo library with photos and videos
 
 ## Step-01
 Flatten directory structure with `step01-flattenDirectories.py`
+A unique increamental number is added to the filename to avoid accidental deletion of duplicate filenames in the tree.
 Make all file extensions lowercase using regex:
 
 `rename 's/\.JPG$/.jpg/' *.JPG`
