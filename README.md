@@ -8,14 +8,16 @@ Import directory tree of photo library with photos and videos
 
 ## Step 01
 Flatten directory structure with `step01-flattenDirectories.py`
-Make all file extensions lowercase using regex
-    rename 's/\.JPG$/.jpg/' *.JPG
+Make all file extensions lowercase using regex:
+
+`rename 's/\.JPG$/.jpg/' *.JPG`
+
 Separate files into directories by file extension
 
 ## Step 02
 Automatically rename files to their caputre DateTime with `step02-PhotoRenameDateTimeOriginal.py`
-Define an input, output (for correctly dated photos), zerodir (for photos with DateTime == 0000-00-00), and fileextension.
-Photos without defined DateTime will not be moved. 
+Define an input, output (for correctly dated photos), zerodir (for photos with `DateTime == 0000-00-00 00:00:00`), and fileextension.
+Photos without defined DateTime will not be moved.
 
 ## Step03
 Create DateTimes for photos with no DateTimes based on Directory Name (which should be the Date in YYYY-MM-DD format), Time will be increamented for each photograph by a second starting from 00:00:00.
@@ -23,6 +25,3 @@ Create DateTimes for photos with no DateTimes based on Directory Name (which sho
 (a) For a single directory use `step03a-SingleFolderNameToPhotoDateTimeOriginal.py` after defining the inputdir (date) and fileextension.
 
 (b) For multiple dates, place all date-directories inside a directory (inputdir) and run `step03b-MultipleFolderNameToPhotoDateTimeOriginal.py` after defining inputdir and fileextension.
-
-
-
