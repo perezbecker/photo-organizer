@@ -1,8 +1,8 @@
 import datetime
 import os
 import subprocess
+import shutil
 
-# Function to rename multiple files
 def step03b(inputdir,fileextension):
 
     directories=[]
@@ -23,15 +23,26 @@ def step03b(inputdir,fileextension):
             NewDateTimeNameString=NewDateTime.strftime("%Y-%m-%d_%H%M%S")+"a"+fileextension
             print(NewDateTimeNameString)
             subprocess.call(["exiftool","-DateTimeOriginal=\""+NewDateTimeString+"\"","./"+inputdir+"/"+directory+"/"+files[i]])
-            os.rename("./"+inputdir+"/"+directory+"/"+files[i], "./"+inputdir+"/"+directory+"/"+NewDateTimeNameString)
+            os.rename("./"+inputdir+"/"+directory+"/"+files[i], "./"+inputdir+"/"+NewDateTimeNameString)
             subprocess.call(["rm","./"+inputdir+"/"+directory+"/"+files[i]+"_original"])
 
+        subprocess.call(["rmdir","./"+inputdir+"/"+directory])
 
-# Driver Code
-if __name__ == '__main__':
 
-    inputdir="testXX"
-    fileextension=".png"
+def FileName2EXIF(inputdir,fileextension):
+
+    for filename in os.listdir(inputdir):
+        DateString=filename[0:10]
+        print(DateString)
+        if not os.path.exists("./"+inputdir+"/"+DateString):
+            os.makedirs("./"+inputdir+"/"+DateString)
+        shutil.move("./"+inputdir+"/"+filename,"./"+inputdir+"/"+DateString+"/"+filename)
 
     step03b(inputdir,fileextension)
+
+if __name__ == '__main__':
+
+    inputdir="no_exif_jpg"
+    fileextension=".jpg"
+    FileName2EXIF(inputdir,fileextension)
 
