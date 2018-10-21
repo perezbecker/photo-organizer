@@ -22,7 +22,7 @@ def step03b(inputdir,fileextension):
             NewDateTimeString=NewDateTime.strftime("%Y:%m:%d %H:%M:%S")
             NewDateTimeNameString=NewDateTime.strftime("%Y-%m-%d_%H%M%S")+"a"+fileextension
             print(NewDateTimeNameString)
-            subprocess.call(["exiftool","-DateTimeOriginal=\""+NewDateTimeString+"\"","./"+inputdir+"/"+directory+"/"+files[i]])
+            subprocess.call(["exiftool","-m","-AllDates=\""+NewDateTimeString+"\"","./"+inputdir+"/"+directory+"/"+files[i]])
             os.rename("./"+inputdir+"/"+directory+"/"+files[i], "./"+inputdir+"/"+NewDateTimeNameString)
             subprocess.call(["rm","./"+inputdir+"/"+directory+"/"+files[i]+"_original"])
 

@@ -19,7 +19,7 @@ def main():
         NewDateTime=DateTime+datetime.timedelta(seconds=i)
         NewDateTimeString=NewDateTime.strftime("%Y:%m:%d %H:%M:%S")
         print(NewDateTimeString)
-        subprocess.call(["exiftool","-DateTimeOriginal=\""+NewDateTimeString+"\"","./"+inputdir+"/"+files[i]])
+        subprocess.call(["exiftool","-m","-AllDates=\""+NewDateTimeString+"\"","./"+inputdir+"/"+files[i]])
         DestinationName = NewDateTime.strftime("%Y-%m-%d_%H%M%S")+"a"+fileextension
         print(DestinationName)
         os.rename("./"+inputdir+"/"+files[i], "./"+inputdir+"/"+DestinationName)
