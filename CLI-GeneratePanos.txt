@@ -1,0 +1,5 @@
+go into directory that contains pictures.
+pto_gen -o 3x3pan.pto *.JPG
+hugin_executor -a 3x3pan.pto
+hugin_executor -s 3x3pan.pto
+convert 'DJI_0001 - DJI_0009.tif' test.jpg

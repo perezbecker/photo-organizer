@@ -1,0 +1,7 @@
+DPB 2018-10-24
+
+Used for all videos in library until 2018-10-20
+ffmpeg -i input -q:v 0 output.mp4
+
+-Best for m4v to mp4
+ffmpeg -i input.m4v -codec copy output.mp4
