@@ -108,5 +108,5 @@ if __name__ == '__main__':
     # Calling main() function
     toLowerAndRemoveHtml("input")
     main("input","photos",".jpg")
-    main("input","videos",".mp4",TimeOffsetSign="-",TimeOffsetHours="4")
+    main("input","videos",".mp4",TimeOffsetSign="-",TimeOffsetHours="5")
 
