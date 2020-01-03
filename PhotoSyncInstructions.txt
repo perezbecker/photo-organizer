@@ -1,0 +1,18 @@
+
+For Samsung Galaxy S9:
+1.- run syncthing
+2.- run photos_stage
+3.- run photos_archive (at the beginning of a new month)
+4.- check for p-date and v-date directories in ~/code/photo-organizer/mobile2media/
+5.- move those directories to ~/Media/dpb-media-jpg-mp4/
+
+
+For Osmo Pocket:
+1.- cp DCIM directory from Osmo to Computer via usb-c cable
+2.- move all 100MEDIA content to ~/code/photo-organizer/osmo2media/input/
+3.- move all PANORAMA content to ~/code/photo-organizer/osmo2media/pano_input/
+4.- run osmo2media.py
+5.- run pano2media.py
+6.- move output videos and files to p-date and v-date directories manually
+7.- move all pano_output to p-date directories manually
+8.- store raw panorama directories in archive
