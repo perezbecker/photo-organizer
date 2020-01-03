@@ -1,6 +1,6 @@
 # photo-organizer
 
-**Code to re-organize photo libraries. Photos/Videos are renamed to their creation DateTime using the following format `YYYY-MM-DD_HHMMSSa.jpg/png/mp4/mov/etc`, where `a` stands for a letter which is incremented whenever there are more than one Photo/Video for a given DateTime. New library is oranized in a tree by calendar-month `YYYY/MM`.**
+**Code to re-organize photo libraries. Photos/Videos are renamed to their creation DateTime using the following format `YYYY-MM-DD_HHMMSSa.jpg/png/mp4/mov/etc`, where `a` stands for a letter which is incremented whenever there are more than one Photo/Video for a given DateTime. New library is oranized in a tree by calendar-month `YYYY-MM`.**
 
 
 ## Step-00
