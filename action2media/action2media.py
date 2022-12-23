@@ -17,6 +17,11 @@ def toLowerAndRemoveHtml(inputdir):
         inputfilename="./"+inputdir+"/"+filename
         os.rename(inputfilename, inputfilename.replace(" ","-").lower())
 
+def remove_lrf(inputdir):
+    lrf_list=glob.glob("./"+inputdir+"/*.LRF")
+    for lrf_path in lrf_list:
+        os.remove(lrf_path)
+
 def get_utc_offset():
     current_time = datetime.datetime.now(datetime.timezone.utc).astimezone()
     utc_offset = current_time.utcoffset() // datetime.timedelta(seconds=3600)
@@ -119,6 +124,7 @@ def main(inputdir,outputdir,fileextension,zerosdir="zeros",TimeOffsetHours="0",T
 if __name__ == '__main__':
 
     # Calling main() function
+    remove_lrf("input")
     toLowerAndRemoveHtml("input")
     main("input","photos",".jpg")
     time_offset_sign,time_offset_hours = get_utc_offset()

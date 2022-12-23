@@ -1,10 +1,12 @@
 
 For Samsung Galaxy S9:
-1.- run syncthing
-2.- run photos_stage
-3.- run photos_archive (at the beginning of a new month)
-4.- check for p-date and v-date directories in ~/code/photo-organizer/mobile2media/
-5.- move those directories to ~/Media/dpb-media-jpg-mp4/
+1.- Wait for the 1st day of the Month
+2.- run syncthing
+3.- run photos_stage
+4.- run photos_archive (will only work at the beginning of a new month)
+5.- check for p-date and v-date directories in ~/code/photo-organizer/mobile2media/
+6.- move those directories to ~/Media/dpb-media-jpg-mp4/
+7.- run sync_shotwell
 
 
 For Osmo Pocket:
